@@ -6,8 +6,11 @@ unique pub-sub powered multi-user feature lets you collaborate with
 remote team members without losing of who's talking about what.
 
 The core is open-source, mostly vanilla Rails, so it can be tweaked
-however your team requires. There is also a plugin framework for
-extending things and sharing them with the community.
+however your team requires. The structure of the app is somewhat
+experimental, dividing the model layer into models and records. This is
+done to enhance the clarity of the design and speed up the test-design
+cycle. There is also a plugin framework for extending things and sharing
+them with the community.
 
 
 ## Current development
@@ -20,3 +23,4 @@ extending things and sharing them with the community.
 
 * Multi-user support
 * Plugin architecture
+
