@@ -1,0 +1,7 @@
+## Project
+* Inbox, a list of stories belonging to no iteration
+* Archive, a list of completed iterations
+* Backlog, a list of open iterations, the first is the current iteration
+
+Projects do not worry about keeping time, a separate process moves
+iterations between inbox and archive.
