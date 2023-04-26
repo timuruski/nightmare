@@ -75,6 +75,7 @@ DEPENDENCIES
   puma
   sinatra
   standard
+  zeitwerk
 
 BUNDLED WITH
    2.4.12
