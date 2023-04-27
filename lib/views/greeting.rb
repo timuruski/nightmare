@@ -4,6 +4,6 @@ class Greeting < Phlex::HTML
   end
 
   def template
-    p { @msg }
+    p(style: "color: blue;") { @msg }
   end
 end
