@@ -4,5 +4,8 @@ module Nightmare
       phlex Greeting.new(msg: "Hello, world!")
       # phlex Greeting.new(msg: "¡Hola, todo el mundo!")
     end
+
+    use GreetingController
+    use RobotController
   end
 end
