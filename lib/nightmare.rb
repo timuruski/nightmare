@@ -13,9 +13,6 @@ module Nightmare
     loader.push_dir(__dir__)
     loader.enable_reloading if env == "development"
 
-    # TODO: Figure out if this is necessary.
-    loader.ignore("#{__dir__}/nightmare/reloader")
-
     # Use a more Rails-like namespace for MVC.
     loader.collapse(
       "#{__dir__}/nightmare/controllers",
