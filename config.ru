@@ -1,10 +1,5 @@
-# $LOAD_PATH.unshift File.expand_path("lib", __dir__)
+require_relative "env"
 
-ENV["RACK_ENV"] ||= "development"
+require "nightmare/reloader"
 
-require "bundler"
-Bundler.require
-
-require "nightmare"
-
-run Nightmare::Reloader.new { Nightmare::App.new }
+run Nightmare::Reloader.new { Nightmare::App }

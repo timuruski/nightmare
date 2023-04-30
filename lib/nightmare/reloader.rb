@@ -1,8 +1,6 @@
-require "monitor"
-
 module Nightmare
   class Reloader
-    MUTEX = Monitor.new
+    MUTEX = Thread::Mutex.new
 
     def initialize(&block)
       @app_block = block
@@ -10,10 +8,10 @@ module Nightmare
 
     def call(env)
       MUTEX.synchronize do
-        Nightmare::Loader.reload
-      end
+        Nightmare.loader.reload
 
-      app.call(env)
+        app.call(env)
+      end
     end
 
     private def app

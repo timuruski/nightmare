@@ -7,4 +7,4 @@ gem "phlex-sinatra"
 gem "puma"
 gem "sinatra"
 gem "standard", group: :development
-gem "zeitwerk"
+gem "zeitwerk", require: false

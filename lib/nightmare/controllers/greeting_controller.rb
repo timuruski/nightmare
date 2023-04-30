@@ -1,6 +1,6 @@
 module Nightmare
   class GreetingController < BaseController
-    get "/greeting" do
+    get "/greet" do
       phlex Greeting.new(msg: params["greeting"] || "Hello, world!")
     end
   end
