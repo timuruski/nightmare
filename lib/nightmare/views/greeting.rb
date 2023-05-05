@@ -1,11 +1,16 @@
 module Nightmare
   class Greeting < Phlex::HTML
-    def initialize(msg: "Hello, world!")
-      @msg = msg
+    def initialize(locals = {})
+      @msg = locals[:msg] || "Hello, world!"
     end
 
     def template
-      p(style: "color: red;") { @msg }
+      div {
+        [
+          p(style: "color: red;") { @msg },
+          p(style: "color: blue;") { url("/") }
+        ]
+      }
     end
   end
 end

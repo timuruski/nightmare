@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 gem "phlex"
 gem "phlex-sinatra"
+gem "pry"
 gem "puma"
 gem "sinatra"
 gem "standard", group: :development

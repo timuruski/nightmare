@@ -1,11 +1,9 @@
 module Nightmare
-  class App < Sinatra::Base
+  class App < BaseController
     use GreetingController
-    use RobotController
 
     get "/" do
-      phlex Greeting.new(msg: "Hello, world!")
-      # phlex Greeting.new(msg: "¡Hola, todo el mundo!")
+      phlex Layout.new(content: Greeting.new)
     end
   end
 end
